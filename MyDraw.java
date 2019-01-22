@@ -5,10 +5,13 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.net.URL;
+
 public class MyDraw extends JComponent{
 
 	private BufferedImage image;
+	private BufferedImage image2;
 	private URL resource = getClass().getResource("run0.png");
+	private URL backgroundresource = getClass().getResource("2D.jpg");
 	
 	public int x = 20;
 	public int y = 20;
@@ -16,6 +19,7 @@ public class MyDraw extends JComponent{
 	public int state = 0;
 	public MyDraw(){
 		try{
+			image2 = ImageIO.read(backgroundresource);
 			image = ImageIO.read(resource);
 		}
 		catch(IOException e){
@@ -75,6 +79,7 @@ public class MyDraw extends JComponent{
 	public void paintComponent (Graphics g){
 		super.paintComponent(g);
 		g.setColor(Color.BLUE);
+		g.drawImage(image2, 0, 0, this);
 		g.drawImage(image,x,y,this);
 	}
 }
