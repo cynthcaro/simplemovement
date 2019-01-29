@@ -29,6 +29,34 @@ public class MyFrame extends JFrame implements KeyListener{
 			myDraw.moveLeft();
 			System.out.println("pos: " + myDraw.x + ", " + myDraw.y);
 		}
+		else if(e.getKeyCode() == KeyEvent.VK_Z){
+			myDraw.punch();
+			System.out.println("punch");
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_X){
+			myDraw.kick();
+			System.out.println("kick");
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_C){
+			myDraw.knockdown();
+			System.out.println("KO");
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_V){
+			myDraw.stand();
+			System.out.println("stand");
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_SPACE){
+			myDraw.jump();
+			System.out.println("jump");
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_A){
+			myDraw.smrslt();
+			System.out.println("drop");
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_D){
+			myDraw.dropattack();
+			System.out.println("drop");
+		}
 	}
 
 	public void keyReleased(KeyEvent e){
