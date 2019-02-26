@@ -20,6 +20,7 @@ public class MyDraw extends JComponent{
 	public int height = 0;
 	public int width = 0;
 
+	public int hp = 100;
 	public int state = 0;
 	public Random randomizer;
 
@@ -362,6 +363,9 @@ public class MyDraw extends JComponent{
 		g.drawImage(image2, 0, 0, this);
 		g.drawImage(image,x,y,this);
 		g.drawImage(image, x, y, this);
+		g.setColor(Color.GREEN);
+		g.fillRect(5, 5, life, 15);
+		System.out.println("XP");
 
 	for(int c = 0; c < monsters.length; c++){
 			if(monsters[c]!=null){

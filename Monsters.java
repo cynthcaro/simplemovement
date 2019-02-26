@@ -8,8 +8,8 @@ import javax.swing.JComponent;
 
 public class Monsters{
 
-	public int xPos = 40;
-	public int yPos = 215;
+	public int xPos = 0;
+	public int yPos = 50;
 	public int width = 0;
 	public int height = 0;
 	public int life = 20;
