@@ -15,16 +15,15 @@ public class MyDraw extends JComponent{
 	private URL resource = getClass().getResource("run0.png");
 	private URL backgroundresource = getClass().getResource("2D.jpg");
 	
-	public int x = 0;
-	public int y = 210;
+	public int x = -5;
+	public int y = 215;
 	public int height = 0;
 	public int width = 0;
 
 	public int state = 0;
-
 	public Random randomizer;
 
-	public int NumberEnemy;
+ 	public int NumberEnemy;
 	Monsters[] monsters = new Monsters [20];
 
 	public MyDraw(){
